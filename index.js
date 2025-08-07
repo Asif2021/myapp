@@ -1,10 +1,10 @@
 require('dotenv').config();
 const express = require('express')
 const app = express()
-const port = 4000
+const port = process.env.PORT
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World! this is home')
 })
 
 app.get('/twitter', (req, res)=>{
@@ -12,7 +12,7 @@ app.get('/twitter', (req, res)=>{
 })
 
 app.get('/login', (req, res)=>{
-    res.send("<h1> Hello World </h1>");
+    res.send("<h1> Hello World! this is login page </h1>");
 })
 
 app.listen(process.env.PORT, () => {
